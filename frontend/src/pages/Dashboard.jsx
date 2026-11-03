@@ -1,0 +1,7 @@
+import { jsx as _jsx } from "react/jsx-runtime";
+import { RequireAuth } from "@/components/providers/require-auth";
+import { AppShell } from "@/components/layout/app-shell";
+import { RepoDashboard } from "@/components/dashboard/repo-dashboard";
+export default function DashboardPage() {
+    return (_jsx(RequireAuth, { children: _jsx(AppShell, { hideHeader: true, children: _jsx(RepoDashboard, {}) }) }));
+}
